@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fo2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#section1">Bancarelle</a></li>
+      <li><a href="#section2">Mostra fotografica</a></li>
+      <li><a href="#section3">Cena</a></li>
+      <li><a href="#section4">Post-cena</a></li>
+      <li><a href="#section5">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content Sections -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay">
+      <svg viewBox="0 0 500 400" class="hero-svg">
+        <defs>
+          <!-- Adjusted the path so the arc is lower in the viewbox -->
+          <path id="curve" d="M50,230 A200,150 0 0,1 450,230" />
+        </defs>
+        <text class="hero-text">
+          <textPath xlink:href="#curve" startOffset="50%" text-anchor="middle" dy="10">
+            Benvenuti al Centenario del Fo2!
+          </textPath>
+        </text>
+      </svg>
+    </div>
+    <!-- Replace "your-image.jpg" with your desired image -->
+    <img src="your-image.jpg" alt="Hero Image" />
+  </section>
+
+  <section id="section1" class="content-section">
+    <h1>About the Museum</h1>
+    <p>Introduction and background of the Takahama Kawara Museum.</p>
+  </section>
+
+  <section id="section2" class="content-section">
+    <h1>Exhibits</h1>
+    <p>Overview of current and past exhibits.</p>
+  </section>
+
+  <section id="section3" class="content-section">
+    <h1>Collection</h1>
+    <p>A glimpse into our historical collection.</p>
+  </section>
+
+  <section id="section4" class="content-section">
+    <h1>Programs</h1>
+    <p>Details on our educational and public programs.</p>
+  </section>
+
+  <section id="section5" class="content-section">
+    <h1>Contact</h1>
+    <p>How to reach us or get more information.</p>
+  </section>
+
+  <!-- Side Window Panel with Integrated Vertical Info Button -->
+<div id="sideWindow" class="side-window">
+  <div class="side-content">
+    <p>
+      <span class="hours">apertura Bancarelle</span><br>
+      &nbsp ore 16.00 <br>
+      <span class="hours">Mostra fotografica</span><br>
+      &nbsp ore 18.00 <br>
+      <span class="hours">Inizio Cena</span><br>
+      &nbsp ore 19.30 <br>
+      <span class="hours">Ariaperta</span><br>
+      &nbsp ore 21.30 <br>
+      <span class="hours">Fine di tutto</span><br>
+      &nbsp ore 23.30 <br>
+    </p>
+  </div>
+  <div class="info-button">Info Orari</div>
+</div>
+
+<footer>By marco giappo e riki</footer>
+  <script src="script.js"></script>
+</body>
+</html>
