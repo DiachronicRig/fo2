@@ -32,26 +32,45 @@ window.addEventListener("scroll", function () {
   }
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();  // Prevent the default jump behavior
+document.addEventListener('DOMContentLoaded', function() {
+  // Smooth scroll for anchor links (both desktop and mobile)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();  // Prevent default jump behavior
 
-    // Get the target element based on the href attribute
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      // Calculate the target element's position so it's centered in the viewport
-      const rect = target.getBoundingClientRect();
-      const elementCenter = rect.top + window.scrollY + (rect.height / 2);
-      const scrollToPosition = elementCenter - (window.innerHeight / 2);
+      // Get target element based on href attribute
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        // Calculate target's vertical center
+        const rect = target.getBoundingClientRect();
+        const elementCenter = rect.top + window.scrollY + (rect.height / 2);
+        const scrollToPosition = elementCenter - (window.innerHeight / 2);
 
-      // Scroll smoothly to the calculated position
-      window.scrollTo({
-        top: scrollToPosition,
-        behavior: 'smooth'
-      });
-    }
+        // Smooth scroll to the calculated position
+        window.scrollTo({
+          top: scrollToPosition,
+          behavior: 'smooth'
+        });
+      }
+      
+      // If the mobile menu is open, close it after clicking a link.
+      if (document.getElementById('navbar').classList.contains('open')) {
+        document.getElementById('navbar').classList.remove('open');
+      }
+    });
   });
+
+  // Hamburger menu toggle for mobile
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', function(e) {
+      // Toggle the 'open' class on the navbar to show/hide the mobile menu
+      navbar.classList.toggle('open');
+    });
+  }
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
   const tabs = document.querySelectorAll('.menu_tab a');
