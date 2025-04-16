@@ -89,9 +89,12 @@
 }
 
 .hero-text {
-  fill: #442c16;
+  fill: #c16c26;
   font-size: 2rem;
   font-weight: bold;
+  paint-order: stroke;
+    stroke: #000000;
+    stroke-width: 1px;
 }
   /* Content sections */
   .content-section {
@@ -100,6 +103,7 @@
     background:#eeeae4;
     font-weight: 500;
     color:#442c16;
+    font-family: 'Outfit';
   }
   /*
   .content-section:nth-child(odd) {
@@ -112,6 +116,7 @@
   */
   .content-section h1 {
     margin-bottom: 20px;
+    font-family: 'Outfit';
   }
   
   /* Side Window Panel */
@@ -119,7 +124,7 @@
   position: fixed;
   top: 20%;
   /* Initially hide most of the panel off-screen */
-  right:-230px;
+  right:-220px;
   background: #fff;
   -webkit-box-shadow:inset 0px 0px 0px 5px #c16c26;
   -moz-box-shadow:inset 0px 0px 0px 5px #c16c26;
@@ -133,6 +138,7 @@
   width: 200px;
   line-height:2rem;
   font-size: 15px;
+  font-family: 'Outfit';
 }
 /* When hovering anywhere on the side window, slide it fully into view */
 .side-window:hover {
@@ -153,6 +159,7 @@
   border-radius: 5px 0 0 5px;
   font-weight: bold;
   font-size:20px;
+  font-family: 'Outfit';
   display: grid;
   place-items: center;
   writing-mode: vertical-rl;
@@ -203,6 +210,9 @@
 }
 
 /*Menu starts*/
+.our_menu{
+  font-family: 'Outfit';
+}
 .menu_tab {
   margin: 0 auto;
   justify-content: center;
@@ -306,4 +316,15 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
     margin: 10px 0;
     text-align: center;
   }
+}
+
+.foot{
+  padding:10px;
+  background: #442c16;
+  opacity: 0.9;
+  color:#eeeae4;
+  height:30px;
+  font-family: 'Outfit';
+  text-align: center;
+  transform:translateY(10px);
 }
