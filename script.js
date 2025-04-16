@@ -55,34 +55,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 document.addEventListener('DOMContentLoaded', function() {
   const tabs = document.querySelectorAll('.menu_tab a');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', function(e) {
-      e.preventDefault();
-      // Save current scroll position
-      const currentScroll = window.pageYOffset;
-      
-      // Remove active state from all tabs
-      tabs.forEach(t => t.classList.remove('active'));
 
-      // Remove 'active' and 'show' classes from all tab content sections
-      const tabContents = document.querySelectorAll('.tab-pane');
-      tabContents.forEach(content => {
-        content.classList.remove('active');
-        content.classList.remove('show');
-      });
+  // Shared function for switching tabs.
+  const switchTab = function(e) {
+    e.preventDefault();
+    
+    // Save current scroll position so page doesn't jump.
+    const currentScroll = window.pageYOffset;
+    
+    // Remove active class from all tabs.
+    tabs.forEach(t => t.classList.remove('active'));
 
-      // Activate the clicked tab and corresponding content pane
-      this.classList.add('active');
-      const targetId = this.getAttribute('href');
-      const targetContent = document.querySelector(targetId);
-      if (targetContent) {
-        targetContent.classList.add('active');
-        targetContent.classList.add('show');
-      }
-      
-      // Reset scroll position to where it was
-      window.scrollTo(0, currentScroll);
+    // Remove active and show classes from all tab content panes.
+    const tabContents = document.querySelectorAll('.tab-pane');
+    tabContents.forEach(content => {
+      content.classList.remove('active');
+      content.classList.remove('show');
     });
+
+    // Set the clicked/touched tab as active.
+    this.classList.add('active');
+
+    // Get the target ID from data-target if available, otherwise from href.
+    const targetId = this.getAttribute('data-target') || this.getAttribute('href');
+    const targetContent = document.querySelector(targetId);
+    if (targetContent) {
+      targetContent.classList.add('active');
+      targetContent.classList.add('show');
+    }
+    
+    // Reset scroll position so the page doesn't jump.
+    window.scrollTo(0, currentScroll);
+  };
+
+  // Listen for both click and touchstart events.
+  tabs.forEach(tab => {
+    tab.addEventListener('click', switchTab, false);
+    tab.addEventListener('touchstart', switchTab, false);
   });
 });
+
 
