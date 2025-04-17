@@ -358,9 +358,11 @@
   .single_menu {
     /* was: margin-bottom: 75px; */
     margin-bottom: 30px;  
+    padding: 0px;
+    width: 100%;
   }
   .menu_content {
-    padding: 0px 20px 0px 20px;
+    padding: 0px 10px 0px 10px;
   }
   .info-button {
     padding: 5px 8px;           /* was 10px */
