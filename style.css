@@ -77,9 +77,10 @@
   top: 50%;                     
   transform: translateY(-50%);
   display: flex;
+  pointer-events: none;
   align-items: center;
   transition: transform 0.3s ease;
-  flex-direction: column;       /*stack image and text vertically?? */
+  flex-direction: column !important;       /*stack image and text vertically?? */
 }
 
 /* size of your left logo */
@@ -112,6 +113,7 @@ nav#navbar.scrolled .nav-logo-left {
 .hero img {
   width: 100%;
   height: 100%;
+  overflow: hidden;
   /*object-fit: cover;*/
 }
 
@@ -317,7 +319,7 @@ nav#navbar.scrolled .nav-logo-left {
 }
 @media screen and (max-width: 950px) {
   .menu-toggle {
-    display: block; 
+    display: inline-block; 
   }
   .fa-bars{
     transform:translate(45vw, 20%);
@@ -337,7 +339,7 @@ nav#navbar.scrolled .nav-logo-left {
     display: none;
   }
   nav#navbar.scrolled ul{
-    top:60px;
+    top:70px;
     background: #e0d6c5;
     transition: transform 0.5s ease;
   }
@@ -381,7 +383,7 @@ nav#navbar.scrolled .nav-logo-left {
     width: 100%;
   }
   .menu_content {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 0px 0px 10px;
   }
   .info-button {
     padding: 5px 8px;           /* was 10px */
