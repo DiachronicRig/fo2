@@ -322,7 +322,7 @@ nav#navbar.scrolled .nav-logo-left {
 .foot {
   background: rgba(68, 44, 22, 0.8);  
   color: #eeeae4;
-  padding: 10px 0.5em 40px;  
+  padding: 10px 0.3em 40px;  
   font-family: 'Outfit';          
   position: relative;                
   text-align: center;
@@ -342,7 +342,7 @@ nav#navbar.scrolled .nav-logo-left {
 .patrocinio-txt {
   margin-top: 1.5rem;            
   margin-left: 8rem;     
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 0.2;
   text-align: left;
 }
