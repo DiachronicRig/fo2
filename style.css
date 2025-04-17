@@ -73,27 +73,27 @@
   /* LEFT logo + text container */
 .nav-logo-left {
   position: absolute;
-  left: 1rem;                   
+  left: 0.8rem;                   
   top: 50%;                     
   transform: translateY(-50%);
   display: flex;
   align-items: center;
   transition: transform 0.3s ease;
-  /*flex-direction: column;       stack image and text vertically?? */
+  flex-direction: column;       /*stack image and text vertically?? */
 }
 
 /* size of your left logo */
 .nav-logo-left img {
-  height: 50px;                 /* adjust as needed */
+  height: 50px;                 
   width: auto;
-  margin-right: 0.5rem;         /* space before the text */
+  margin-right: 9rem;         
 }
 
 /* small lines of text beside it */
 .nav-logo-left-text p {
   margin: 0;
-  line-height: 1.0;
-  font-size: 0.6rem;            /* smaller text */
+  line-height: 0.9;
+  font-size: 0.5rem;            
   color: #442c16;
 }
 
