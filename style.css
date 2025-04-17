@@ -322,7 +322,7 @@ nav#navbar.scrolled .nav-logo-left {
 .foot {
   background: rgba(68, 44, 22, 0.8);  
   color: #eeeae4;
-  padding: 10px 1em 40px;  
+  padding: 10px 0.5em 40px;  
   font-family: 'Outfit';          
   position: relative;                
   text-align: center;
