@@ -359,6 +359,9 @@
     /* was: margin-bottom: 75px; */
     margin-bottom: 30px;  
   }
+  .menu_content {
+    padding: 0px 20px 0px 20px;
+  }
   .info-button {
     padding: 5px 8px;           /* was 10px */
     font-size: 1rem;            /* was 20px; now 16px (1rem) */
