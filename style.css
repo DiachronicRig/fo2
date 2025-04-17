@@ -317,16 +317,57 @@ nav#navbar.scrolled .nav-logo-left {
   cursor: pointer;
   display: none; /* Hidden by default*/
 }
-.foot{
-  padding:10px;
-  background: #442c16;
-  opacity: 0.9;
-  color:#eeeae4;
-  height:30px;
-  font-family: 'Outfit';
+
+/* make `.foot` expand to fit the logos underneath */
+.foot {
+  background: rgba(68, 44, 22, 0.8);  /* or whatever bg you like */
+  color: #eeeae4;
+  padding: 20px 1em 60px;  
+  font-family: 'Outfit';          /* extra bottom padding for logos */
+  position: relative;                /* so absolute children position against it */
   text-align: center;
-  
 }
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-left-group {
+  display: flex;
+  flex-direction: row;      /* ← row instead of column */
+  align-items: left;      /* vertically center text with logo */
+}
+
+/* give a little space between logo and text */
+.patrocinio-txt {
+  margin-top: 2rem;            /* remove any top margin */
+  margin-left: 8rem;     /* space to the right of the logo */
+  font-size: 0.8rem;
+  line-height: 1.0;
+  text-align: left;
+}
+/* wrapper for the two logo images */
+.footer-logos {
+  position: relative;       
+}
+.footer-logo {
+  position: absolute;
+  top: 0;
+  height: 100px;          
+  width: auto;
+}
+.footer-logo-left {
+  left: 1em;
+}
+.footer-logo-right {
+  right: 1em;
+}
+
+body.scrolled .footer-logo {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
+
 
 @media screen and (max-width: 950px) {
   .menu-toggle {
