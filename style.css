@@ -47,6 +47,19 @@
   nav#navbar a:hover {
     color: #c16c26;
   }
+  .nav-logo {
+    position: absolute;
+    right: 2rem;             
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px;            
+    width: auto;
+    transition: transform 0.3s ease;
+    pointer-events: auto;    /* ensure it remains clickable if ever needed */
+  }
+  nav#navbar.scrolled .nav-logo {
+    transform: translateY(-50%);
+  }
   nav#navbar.scrolled{
     height: 70px;
   background-color: #e0d6c5;
@@ -130,7 +143,8 @@
   -moz-box-shadow:inset 0px 0px 0px 5px #c16c26;
   box-shadow:inset 0px 0px 0px 5px #c16c26;
   transition: right 0.5s ease;
-  z-index: 1100;
+  z-index: 2000;
+  pointer-events: auto;
   padding: 20px 10px 20px 20px; /* leave space on the left for the info button */
 }
 .side-content{
@@ -180,9 +194,11 @@
     border: 2px solid black;
     box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.6);
   }
-  
+#standlist{
+  padding-left:35%;
+}
 /* Responsive Styling */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   nav#navbar ul {
     flex-direction: column;
   }
@@ -205,7 +221,7 @@
     font-size: 1.2rem;
   }
   .content-section {
-    padding-top: 70px; /* Adjust for smaller navbar sizes */
+    padding-top: 50px; /* Adjust for smaller navbar sizes */
   }
 }
 
@@ -241,26 +257,11 @@
 }
 .single_menu {
   position: relative;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
   transition: .3s;
-}
-.single_menu:hover img{
-  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
-
-}
-.single_menu img {
-  width: 33%;
-  position: absolute;
-  height: 140px;
-  -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-  transition: .3s;
-  border: 1px solid #ddd;
-  border-radius: 5px;
 }
 .menu_content {
-  padding: 0px 50px 0px 50px;
+  padding: 0px 40px 0px 40px;
 
 }
 .menu_content h4 {
@@ -295,7 +296,7 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
   cursor: pointer;
   display: none; /* Hidden by default, shown via media queries */
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   .menu-toggle {
     display: block; /* Show hamburger */
   }
@@ -340,4 +341,28 @@ clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
   font-family: 'Outfit';
   text-align: center;
   
+}
+
+@media screen and (max-width: 950px) {
+  .content-section {
+    padding: 3em 1empx 3em 0em;        
+  }
+  .photo.deamicis {
+    width: 40%;              
+    height: auto;
+    margin: 0px 15px 0px 0px;
+  }
+  #standlist {
+    padding-left: 10%;       
+  }
+  .single_menu {
+    /* was: margin-bottom: 75px; */
+    margin-bottom: 30px;  
+  }
+  .info-button {
+    padding: 5px 8px;           /* was 10px */
+    font-size: 1rem;            /* was 20px; now 16px (1rem) */
+    left: -28px;                 /* was -37px; now matches slimmer width */
+    width: auto;
+  }
 }
