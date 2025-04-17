@@ -1,15 +1,22 @@
-/* Reset some default spacing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  /* Reset some default spacing */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
   }
+
   body {
-    font-family: 'Outfit';
-    font-size: 22px;
-    color:#442c16;
-    background: #eeeae4;
-}
+      font-family: 'Outfit';
+      font-size: 22px;
+      color:#442c16;
+      background: #eeeae4;
+  }
+
+  /*Aggiunto da Marco per far si che fosse tutto allineato e che su telefono non fosse oscurato il testo dalla info bar*/
+  #section1 p, #section2 p, #section3 p, #section4 p {
+    width: 98%;
+    text-align: justify;
+  }
 
   /* Navbar styles */
   nav#navbar {
@@ -108,6 +115,7 @@ nav#navbar.scrolled .nav-logo-left {
   width: 100%;
   height: 100vh;
   background:#eeeae4;
+  overflow: hidden;
 }
 
 .hero img {
@@ -117,20 +125,22 @@ nav#navbar.scrolled .nav-logo-left {
   /*object-fit: cover;*/
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+.hero-background{
   width: 100%;
   height: 100%;
-  pointer-events: none; 
-  display: flex;
-  justify-content: center;
-  align-items: center;            
-  flex-direction: column;       
-  align-items: center;
-  gap: 1rem;    
+  object-fit: cover;
+  opacity: 0.6;
+  display: block;
 }
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  z-index: 2;    
+  text-align: center;
+}
+
 /* style for your PNG */
 .hero-text-image {
   width: 70% !important;                   
@@ -138,30 +148,31 @@ nav#navbar.scrolled .nav-logo-left {
   pointer-events: none;     
   user-select: none;
 }
-  /* Content sections */
-  .content-section {
-    height: fit-content;
-    padding: 3em; /* account for the fixed navbar */
-    background:#eeeae4;
-    font-weight: 500;
-    color:#442c16;
-    font-family: 'Outfit';
-  }
-  /*
-  .content-section:nth-child(odd) {
-    background: #f2f2f2;
-  }
+
+/* Content sections */
+.content-section {
+  height: fit-content;
+  padding: 3em; /* account for the fixed navbar */
+  background:#eeeae4;
+  font-weight: 500;
+  color:#442c16;
+  font-family: 'Outfit';
+}
+/*
+.content-section:nth-child(odd) {
+  background: #f2f2f2;
+}
   
-  .content-section:nth-child(even) {
-    background: #e6e6e6;
-  }
-  */
-  .content-section h1 {
-    margin-bottom: 20px;
-    font-family: 'Outfit';
-  }
+.content-section:nth-child(even) {
+  background: #e6e6e6;
+}
+*/
+.content-section h1 {
+  margin-bottom: 20px;
+  font-family: 'Outfit';
+}
   
-  /* Side Window Panel */
+/* Side Window Panel */
 .side-window {
   position: fixed;
   top: 20%;
@@ -233,6 +244,18 @@ nav#navbar.scrolled .nav-logo-left {
   nav#navbar li {
     margin: 5px 0;
   }
+
+  .hero {
+    width: 100%;
+    height: 40vh;
+  }
+  
+  .hero-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 650px) {
   .hero-text-image{
@@ -240,9 +263,37 @@ nav#navbar.scrolled .nav-logo-left {
     height:70% !important;
   }
 }
+
 @media screen and (max-width: 480px) {
   .content-section {
     padding-top: 50px; /*  for smaller navbar sizes */
+  }
+
+  .hero {
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .hero-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu_tab .nav-item {
+    width: 33.3333%;
+  }
+
+  .menu_tab .nav-link {
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .patrocinio-txt{ 
+    margin-left: 12em !important;
+    font-size: 10px !important;
   }
 }
 
@@ -252,10 +303,11 @@ nav#navbar.scrolled .nav-logo-left {
 }
 .menu_tab {
   margin: 0 auto;
-  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
 }
-.nav-item {
-  display: inline-block;
+.menu_tab .nav-item {
+  flex: 0 0 auto;
   text-align: center;
 }
 .nav-tabs .nav-link{
