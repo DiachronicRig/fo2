@@ -317,6 +317,17 @@ nav#navbar.scrolled .nav-logo-left {
   cursor: pointer;
   display: none; /* Hidden by default*/
 }
+.foot{
+  padding:10px;
+  background: #442c16;
+  opacity: 0.9;
+  color:#eeeae4;
+  height:30px;
+  font-family: 'Outfit';
+  text-align: center;
+  
+}
+
 @media screen and (max-width: 950px) {
   .menu-toggle {
     display: inline-block; 
@@ -351,20 +362,9 @@ nav#navbar.scrolled .nav-logo-left {
     margin: 10px 0;
     text-align: center;
   }
-}
-
-.foot{
-  padding:10px;
-  background: #442c16;
-  opacity: 0.9;
-  color:#eeeae4;
-  height:30px;
-  font-family: 'Outfit';
-  text-align: center;
-  
-}
-
-@media screen and (max-width: 950px) {
+  .nobr{
+    display: none;
+  }
   .content-section {
     padding: 3em 1empx 3em 0em;        
   }
