@@ -48,7 +48,7 @@
   nav#navbar a:hover {
     color: #c16c26;
   }
-  .nav-logo {
+  /*.nav-logo {
     position: absolute;
     right: 1rem;             
     top: 50%;
@@ -60,7 +60,7 @@
   }
   nav#navbar.scrolled .nav-logo {
     transform: translateY(-50%);
-  }
+  }*/
   nav#navbar.scrolled{
     height: 70px;
   background-color: #e0d6c5;
@@ -70,7 +70,7 @@
     padding: 1rem;
     font-size: 1.3rem;
   }
-  /* LEFT logo + text container */
+  /* LEFT logo + text container 
 .nav-logo-left {
   position: absolute;
   left: 0.8rem;                   
@@ -80,17 +80,17 @@
   pointer-events: none;
   align-items: center;
   transition: transform 0.3s ease;
-  flex-direction: column !important;       /*stack image and text vertically?? */
+  flex-direction: column !important;       stack image and text vertically?? 
 }
 
-/* size of your left logo */
+size of your left logo 
 .nav-logo-left img {
   height: 50px;                 
   width: auto;
   margin-right: 9rem;         
 }
 
-/* small lines of text beside it */
+small lines of text beside it 
 .nav-logo-left-text p {
   margin: 0;
   line-height: 0.9;
@@ -98,10 +98,10 @@
   color: #442c16;
 }
 
-/* push it up 10px when navbar is scrolled (same as burger) */
+ push it up 10px when navbar is scrolled (same as burger) 
 nav#navbar.scrolled .nav-logo-left {
-  transform: translateY(-50%);
-}
+  transform: translateY(-50%);*/
+
   /* Hero Section Styles */
 .hero {
   position: relative;
@@ -320,11 +320,11 @@ nav#navbar.scrolled .nav-logo-left {
 
 /* make `.foot` expand to fit the logos underneath */
 .foot {
-  background: rgba(68, 44, 22, 0.8);  /* or whatever bg you like */
+  background: rgba(68, 44, 22, 0.8);  
   color: #eeeae4;
-  padding: 20px 1em 60px;  
-  font-family: 'Outfit';          /* extra bottom padding for logos */
-  position: relative;                /* so absolute children position against it */
+  padding: 10px 1em 40px;  
+  font-family: 'Outfit';          
+  position: relative;                
   text-align: center;
 }
 
@@ -334,16 +334,16 @@ nav#navbar.scrolled .nav-logo-left {
 }
 .footer-left-group {
   display: flex;
-  flex-direction: row;      /* ← row instead of column */
-  align-items: left;      /* vertically center text with logo */
+  flex-direction: row;      
+  align-items: left;      
 }
 
-/* give a little space between logo and text */
+/* little space between logo and text */
 .patrocinio-txt {
-  margin-top: 2rem;            /* remove any top margin */
-  margin-left: 8rem;     /* space to the right of the logo */
+  margin-top: 1.5rem;            
+  margin-left: 8rem;     
   font-size: 0.8rem;
-  line-height: 1.0;
+  line-height: 0.2;
   text-align: left;
 }
 /* wrapper for the two logo images */
