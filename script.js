@@ -113,8 +113,3 @@ document.addEventListener('DOMContentLoaded', function() {
     tab.addEventListener('touchstart', switchTab, false);
   });
 });
-
-/*Notify the user that the still is still under construction*/
-window.addEventListener('DOMContentLoaded', () => {
-  alert('Questo sito subirà degli aggiornamenti nei prossimi giorni, soprattutto i menù che verranno serviti alla cena!  Ci scusiamo per il disturbo');
-});
