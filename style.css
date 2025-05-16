@@ -109,6 +109,20 @@ small lines of text beside it
 nav#navbar.scrolled .nav-logo-left {
   transform: translateY(-50%);*/
 
+.piantina-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.piantina > figcaption {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.piantina1, .piantina2 {
+  width: 99%;
+}
+
   /* Hero Section Styles */
 .hero {
   position: relative;
@@ -255,6 +269,20 @@ nav#navbar.scrolled .nav-logo-left {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .piantina-container {
+    display: block;
+    justify-content: space-between;
+  }
+  
+  .piantina > figcaption {
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .piantina1, .piantina2 {
+    width: 99%;
   }
 }
 @media screen and (max-width: 650px) {
